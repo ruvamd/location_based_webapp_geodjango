@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p9rdl^rul=48mb1f*v(=*)lpqt#56+ca99s5zr41(!nk-@5=@!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -79,7 +79,6 @@ WSGI_APPLICATION = 'shops.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-
         'NAME': 'shops',
         'USER': 'shopadmin',
         'PASSWORD': 'shoppass',
@@ -123,7 +122,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
